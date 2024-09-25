@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .career-highlights, .personal-info, .playing-style {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-radius: 10px;
+        }
+        .career-highlights h2, .personal-info h2, .playing-style h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .career-highlights ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .career-highlights li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .career-highlights li:before {
+            content: "⚽";
+            position: absolute;
+            left: 0;
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristiano Ronaldo - The Legend</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #18c281 0%, #c77e11 100%);
+            color: #050000;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 50px 0;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .text {
+            flex: 1;
+            padding-right: 30px;
+        }
+        .image {
+            flex: 1;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+            animation: slideUp 1s ease-in-out;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+    <style>
+        section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        
+        section.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cristiano Ronaldo</h1>
+            <p>The Football Legend</p>
+        </header>
+        <div class="content">
+            <div class="text">
+                <h2>About Ronaldo</h2>
+                <p>Cristiano Ronaldo is widely regarded as one of the greatest footballers of all time. His incredible skill, dedication, and numerous achievements have made him a global icon in the world of sports.</p>
+            </div>
+            <div class="image">
+                <img src="https://www.logo-designer.co/storage/2013/06/Cristiano-Ronaldo-7-Nike-logo-design-identity-graphics-3.jpg" alt="Cristiano Ronaldo" onerror="this.onerror=null; this.src='path/to/fallback-image.jpg';">
+            </div>
+        </div>
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number" style="color: black;">5</div>
+                <div style="color: black;">Ballon d'Or Awards</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">700+</div>
+                <div>Career Goals</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">30+</div>
+                <div>Major Trophies</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+    <section class="career-highlights">
+        <h2>Career Highlights</h2>
+        <ul>
+            <li>5-time UEFA Champions League winner</li>
+            <li>All-time top scorer in international football</li>
+            <li>Record holder for most goals in UEFA Champions League</li>
+            <li>First player to win league titles in England, Spain, and Italy</li>
+            <li>Portugal's all-time top scorer and most capped player</li>
+        </ul>
+    </section>
+    <section class="personal-info">
+        <h2>Personal Information</h2>
+        <p>Born on February 5, 1985, in Funchal, Madeira, Portugal, Ronaldo began his professional career with Sporting CP before moving to Manchester United in 2003. He has since played for Real Madrid, Juventus, and returned to Manchester United before joining Al Nassr in Saudi Arabia.</p>
+    </section>
+    <section class="playing-style">
+        <h2>Playing Style</h2>
+        <p>Ronaldo is known for his versatility as a forward, able to play on either wing as well as through the center. He is particularly famous for his acceleration, speed, dribbling skills, and his exceptional ability to score goals, especially from free kicks and penalties.</p>
+    </section>
+    <section class="more-info">
+        <h2>More About Ronaldo</h2>
+        <div class="info-pages">
+            <div class="info-page">
+                <h3>Early Life</h3>
+                <img src="https://i.pinimg.com/originals/ba/5a/ce/ba5ace451a528dcd3124275d885e0715.jpg" alt="Young Cristiano Ronaldo" onerror="this.onerror=null; this.src='path/to/fallback-image.jpg';" style="width: 150px; height: auto;">
+                <p>Ronaldo grew up in a working-class neighborhood in Madeira. He started playing football at a young age and joined amateur team Andorinha when he was just 8 years old.</p>
+                <a href="early-life.html" class="read-more">Read More</a>
+            </div>
+            <div class="info-page">
+                <h3>Club Career</h3>
+                <img src="https://i.ytimg.com/vi/qwEBZa8iikY/maxresdefault.jpg" alt="Ronaldo in club jersey" onerror="this.onerror=null; this.src='path/to/fallback-image.jpg';" style="width: 150px; height: auto;">
+                <p>From Sporting CP to Manchester United, Real Madrid, Juventus, and beyond, Ronaldo has left an indelible mark on every club he's played for.</p>
+                <a href="club-career.html" class="read-more">Read More</a>
+            </div>
+            <div class="info-page">
+                <h3>International Career</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBdWi6BOIKfpNvOWoT5tQyYFa-4fJPAfU6cA&s" alt="Ronaldo playing for Portugal" onerror="this.onerror=null; this.src='path/to/fallback-image.jpg';" style="width: 100px; height: auto;">
+                <p>Ronaldo has been a key player for the Portuguese national team, leading them to victory in Euro 2016 and the 2018-19 UEFA Nations League.</p>
+                <button onclick="alert('Sorry, this page is currently under construction. Please check back later!');" class="read-more">Read More</button>
+            </div>
+            <div class="info-page">
+                <h3>Off the Field</h3>
+                <img src="https://www.thesun.co.uk/wp-content/uploads/2017/11/nintchdbpict000018039255.jpg?strip=all&w=960" alt="Ronaldo doing charity work" onerror="this.onerror=null; this.src='path/to/fallback-image.jpg';" style="width: 150px; height: auto;">
+                <p>Beyond football, Ronaldo is known for his charitable work, fashion ventures, and being a devoted father to his children.</p>
+                <a href="off-field.html" class="read-more">Read More</a>
+            </div>
+        </div>
+    </section>
+    <section class="rivalry">
+        <h2>The Great Rivalry: Ronaldo and Messi</h2>
+        <div class="rivalry-images">
+            <img src="https://assets.goal.com/images/v3/blte6090be999e21622/d84bf2d61a8c33fd6129924e3649358b39c99785.jpg?auto=webp&format=pjpg&width=3840&quality=60" alt="Ronaldo and Messi together off the pitch" onerror="this.onerror=null; this.src='path/to/fallback-image.jpg';" style="width: 45%; height: auto; margin-right: 5%;">
+            <img src="https://www.si.com/.image/t_share/MTk2NTcxOTY5Nzg3Nzk5NTE5/imago1022543202h.jpg" alt="Ronaldo and Messi on the pitch" onerror="this.onerror=null; this.src='path/to/fallback-image.jpg';" style="width: 45%; height: auto;">
+        </div>
+        <p>One of the most captivating aspects of modern football has been the friendly rivalry between Cristiano Ronaldo and Lionel Messi. This rivalry has pushed both players to reach unprecedented heights in their careers:</p>
+        <ul>
+            <li>Both players have consistently challenged each other to improve, resulting in numerous records and accolades.</li>
+            <li>Their competition has elevated the overall quality of football, inspiring a new generation of players.</li>
+            <li>Despite the media-driven rivalry, both Ronaldo and Messi have expressed mutual respect and admiration for each other's talents.</li>
+            <li>Their matches against each other, particularly in El Clásico, have become some of the most watched and anticipated events in sports history.</li>
+            <li>Together, they have dominated individual awards like the Ballon d'Or for over a decade, showcasing their exceptional and sustained excellence.</li>
+        </ul>
+        <p>This rivalry has not only defined an era in football but has also given fans worldwide the privilege of witnessing two of the greatest players of all time competing at their peak simultaneously.</p>
+        <button onclick="window.location.href='rivalry.html';" class="read-more">Read More About The Rivalry</button>
+    </section>
